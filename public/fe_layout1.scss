@@ -1,0 +1,84 @@
+body {    
+    width : 436pt;
+    height: 543pt;
+    box-sizing: content-box;
+    padding: 53pt 38pt;
+    
+    background: white;
+    
+}
+
+.grayfood {
+    display: block;
+    div {
+        display: flex;
+        div {
+            font-weight: bold;
+            display : flex;
+            width : 78pt;
+            height : 78pt;
+            background: #BBBBBB;
+            justify-content: center;
+            margin: 0 3pt;
+            align-items: center;
+            color : white;
+            text-align: center;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+    }
+    .first_group {
+        margin : 0 0 15pt 0; 
+    }
+    .second_group {
+        margin : 0 0 26pt 0; 
+    }
+}
+
+.aquafood {
+    display: block;
+    div {
+        display: flex;
+        div {
+            font-weight: bold;
+            display : flex;
+            width : 78pt;
+            height : 78pt;
+            background: #2AC1BC;
+            justify-content: center;
+            margin: 0 3pt;
+            align-items: center;
+            color : white;
+            text-align: center;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+    }
+    .first_group {
+        margin : 0 0 15pt 0; 
+    }
+    .second_group {
+        margin : 0 0 29pt 0; 
+    }
+}
+
+.etcfood {
+    display: flex;
+    div {
+        display: flex;
+        
+        div {
+            font-weight: bold;
+            display : flex;
+            width : 70pt;
+            height : 70pt;
+            justify-content: center;
+            margin: 0 3pt;
+            align-items: center;
+            color : white;
+            text-align: center;
+            border-radius: 40px;
+            box-sizing: border-box;
+        }
+    }
+}

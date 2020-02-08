@@ -1,0 +1,28 @@
+{
+  "name": "layout-exp",
+  "version": "1.0.0",
+  "description": "HTML-CSS Layout Example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel index.html --no-source-maps",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmm117/layout-exp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmm117/layout-exp/issues"
+  },
+  "homepage": "https://github.com/gmm117/layout-exp#readme",
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.25.0"
+  }
+}
