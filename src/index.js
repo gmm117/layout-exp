@@ -1,13 +1,15 @@
-import fe_layout1_html from './public/fe_layout1.html';
-import fe_layout2_html from './public/fe_layout2.html';
+import fe_layout1_html from '../public/fe_layout1.html';
+import fe_layout2_html from '../public/fe_layout2.html';
+import fe_layout3_html from '../public/fe_layout3.html';
 
 let layout1 = fe_layout1_html;
 let layout2 = fe_layout2_html;
+let layout3 = fe_layout3_html;
 let main_iframe = document.querySelector('#main_frame');
 let main_element = main_iframe.contentDocument || main_iframe.contentWindow.document;
 const fe_layout1 = document.querySelector('#fe_layout1');
 const fe_layout2 = document.querySelector('#fe_layout2');
-
+const fe_layout3 = document.querySelector('#fe_layout3');
 
 function changeFrame(target) {
     main_element.lastChild.style.display = "none";
@@ -25,3 +27,9 @@ fe_layout1.addEventListener('click', (e) => {
 fe_layout2.addEventListener('click', (e) => {
     changeFrame(layout2);
 });
+
+fe_layout3.addEventListener('click', (e) => {
+    changeFrame(layout3);
+});
+
+changeFrame(layout1);

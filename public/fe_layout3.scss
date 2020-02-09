@@ -1,0 +1,44 @@
+body {
+    width : 360px;
+    height : 1430px;
+    padding: 10px 10px;
+    background: white;
+    font: {
+        family: "Noto Serif CJK KR", serif;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    border-bottom: 2px solid #DDDDDD;
+
+    .nav_header_left {
+        display: flex;
+        align-items: center;
+
+        >img {
+            &:nth-child(1) {
+                height: 26px;
+                padding-left: 16px;
+                padding-right: 10px
+            }
+            &:nth-last-child(1) {
+                height: 21px;
+            }
+        }
+    }
+
+    .nav_header_right {
+        img {
+            height: 26px;
+
+            &:nth-child(2n) {
+                padding: 0 26px;
+            }
+        }
+    }
+}
+
