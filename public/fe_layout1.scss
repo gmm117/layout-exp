@@ -1,9 +1,7 @@
 body {    
-    width : 436pt;
-    height: 543pt;
-    box-sizing: content-box;
-    padding: 53pt 38pt;
-    
+    width : 436px;
+    height: 543px;
+    padding: 53px 38px;
     background: white;
     
 }
@@ -15,11 +13,11 @@ body {
         div {
             font-weight: bold;
             display : flex;
-            width : 78pt;
-            height : 78pt;
+            width : 78px;
+            height : 78px;
             background: #BBBBBB;
             justify-content: center;
-            margin: 0 3pt;
+            margin: 0 3px;
             align-items: center;
             color : white;
             text-align: center;
@@ -28,10 +26,10 @@ body {
         }
     }
     .first_group {
-        margin : 0 0 15pt 0; 
+        margin : 0 0 15px 0; 
     }
     .second_group {
-        margin : 0 0 26pt 0; 
+        margin : 0 0 26px 0; 
     }
 }
 
@@ -42,8 +40,8 @@ body {
         div {
             font-weight: bold;
             display : flex;
-            width : 78pt;
-            height : 78pt;
+            width : 78px;
+            height : 78px;
             background: #2AC1BC;
             justify-content: center;
             margin: 0 3pt;
@@ -55,10 +53,10 @@ body {
         }
     }
     .first_group {
-        margin : 0 0 15pt 0; 
+        margin : 0 0 15px 0; 
     }
     .second_group {
-        margin : 0 0 29pt 0; 
+        margin : 0 0 29px 0; 
     }
 }
 
@@ -70,10 +68,10 @@ body {
         div {
             font-weight: bold;
             display : flex;
-            width : 70pt;
-            height : 70pt;
+            width : 70px;
+            height : 70px;
             justify-content: center;
-            margin: 0 3pt;
+            margin: 0 3px;
             align-items: center;
             color : white;
             text-align: center;
