@@ -7,7 +7,7 @@
 * Cross platform
   - Windows, Mac, Linux
 * Browser
-  - IE11, Chrome, Safari, Edge
+  - IE11, Chrome, Safari, Edge, Firefox
 
 ## How To Use
 
@@ -29,9 +29,8 @@ $ npm run build
 # Parcel Run(develop mode)
 $ npm run dev
 
-# webpack deploy
+# Parcel deploy(GitHub)
 $ npm run deploy
-
 ```
 
 
@@ -46,8 +45,10 @@ I'd like you send me an email at <gmm117@naver.com> about anything you'd want to
 
 This software uses the following open source packages:
 
-- [webpack](https://ko.parceljs.org/)
+- [parcel](https://ko.parceljs.org/)
 - [npm](https://www.npmjs.com/)
+- [node-sass](https://github.com/sass/node-sass)
+
 
 ## Support
 
