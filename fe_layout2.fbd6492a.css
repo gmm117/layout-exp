@@ -1,13 +1,13 @@
 body {
-  width: 360px;
-  padding: 53px 38px;
   background: white;
   font-family: "Noto Serif CJK KR", serif; }
 
 #content {
-  margin: 0 10px;
-  border: 1px solid gray;
-  height: inherit;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  min-width: 22.5rem;
+  max-width: 45rem;
   position: relative; }
   #content > img {
     position: absolute;
@@ -15,11 +15,6 @@ body {
     left: 16px;
     width: 26px;
     height: 26px; }
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both; }
 
 .title {
   height: 54px;
@@ -45,7 +40,6 @@ body {
     height: 40px;
     background: #73675C;
     border-radius: 24px;
-    font-weight: bold;
     padding: 0 12px;
     font-size: 15px; }
     .goods-info .goods_addr > img {
@@ -63,53 +57,102 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 54px;
-    padding-top: 27px;
+    padding: 24px 0 8px 0;
     box-sizing: border-box;
     font-size: 15px;
-    font-weight: bold;
     letter-spacing: -0.5px; }
-
-.goods-lists {
-  box-sizing: border-box; }
-  .goods-lists .goods-list {
-    padding-top: 24px;
-    border-bottom: 1px solid #DDDDDD; }
-    .goods-lists .goods-list .goods_border {
-      padding: 0 16px; }
-      .goods-lists .goods-list .goods_border .goods-top {
-        display: flex;
-        border-bottom: 1px dashed #EEEEEE; }
-        .goods-lists .goods-list .goods_border .goods-top .goods_image {
-          height: 48px;
-          border-radius: 4px; }
-        .goods-lists .goods-list .goods_border .goods-top .goods_content {
-          padding-left: 12px;
-          font-size: 15px; }
-        .goods-lists .goods-list .goods_border .goods-top .goods_money {
-          padding-left: 12px;
-          padding-top: 4px;
-          padding-bottom: 16px;
-          font-size: 18px;
-          letter-spacing: -0.5px;
-          font-weight: bold; }
-        .goods-lists .goods-list .goods_border .goods-top .goods_plus {
+    .goods-info .goods_sort > div {
+      display: flex; }
+      .goods-info .goods_sort > div button {
+        border: none;
+        background: white;
+        cursor: pointer;
+        outline: none;
+        margin-left: 4px; }
+        .goods-info .goods_sort > div button img {
+          height: 16px; }
+      .goods-info .goods_sort > div ul {
+        box-sizing: border-box;
+        position: absolute;
+        top: 25px;
+        z-index: 1;
+        width: 110px;
+        height: 170px;
+        padding: 5px 0;
+        display: none;
+        border: 1px solid black;
+        background: white;
+        font-size: 14px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 4px 0px; }
+        .goods-info .goods_sort > div ul li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 108px;
           height: 40px;
-          padding-left: 19px; }
-      .goods-lists .goods-list .goods_border .goods-bottom {
+          padding: 10px 0px;
+          box-sizing: border-box; }
+          .goods-info .goods_sort > div ul li:nth-child(1) {
+            color: #42C1BC; }
+    .goods-info .goods_sort .goods_buycnt {
+      position: relative;
+      margin-left: 13px; }
+
+.goods-lists .goods-list {
+  padding-top: 24px;
+  border-bottom: 1px solid #DDDDDD; }
+  .goods-lists .goods-list .goods_border {
+    padding: 0 16px; }
+    .goods-lists .goods-list .goods_border .goods-top {
+      display: flex;
+      min-width: 155px;
+      border-bottom: 1px dashed #EEEEEE; }
+      .goods-lists .goods-list .goods_border .goods-top > div {
         display: flex;
-        padding: 8px 0 24px 0; }
-        .goods-lists .goods-list .goods_border .goods-bottom img {
-          width: 68px;
-          height: 19px; }
-        .goods-lists .goods-list .goods_border .goods-bottom p {
-          display: flex;
-          align-items: center;
-          vertical-align: middle;
-          padding: 0 8px;
-          color: #666666; }
-        .goods-lists .goods-list .goods_border .goods-bottom div {
-          display: flex;
-          align-items: center;
-          font-size: 14px;
-          color: #666666;
-          letter-spacing: -0.5px; }
+        flex-direction: column;
+        min-width: 155px;
+        margin: 0 auto 0 0; }
+      .goods-lists .goods-list .goods_border .goods-top > button {
+        border: none;
+        background: white;
+        cursor: pointer;
+        outline: none;
+        width: 40px;
+        height: 40px;
+        margin-left: 19px; }
+      .goods-lists .goods-list .goods_border .goods-top > img {
+        height: 48px;
+        border-radius: 4px; }
+      .goods-lists .goods-list .goods_border .goods-top .goods_content {
+        font-weight: 400;
+        margin-left: 12px;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      .goods-lists .goods-list .goods_border .goods-top .goods_money {
+        padding-left: 12px;
+        padding-top: 4px;
+        padding-bottom: 16px;
+        font-size: 18px;
+        letter-spacing: -0.5px;
+        font-weight: 700; }
+    .goods-lists .goods-list .goods_border .goods-bottom {
+      display: flex;
+      align-items: center;
+      padding: 8px 0 24px 0; }
+      .goods-lists .goods-list .goods_border .goods-bottom img {
+        width: 68px;
+        height: 19px; }
+      .goods-lists .goods-list .goods_border .goods-bottom span {
+        width: 1px;
+        height: 8px;
+        background: #DDDDDD;
+        margin: 0px 8px; }
+      .goods-lists .goods-list .goods_border .goods-bottom div {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #666666;
+        letter-spacing: -0.5px; }

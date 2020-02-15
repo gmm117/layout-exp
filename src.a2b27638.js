@@ -117,7 +117,70 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/index.js":[function(require,module,exports) {
+})({"src/fe_layout2.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fe2_initialize = fe2_initialize;
+
+function fe2_initialize(docTarget) {
+  var goods_buysort = docTarget.querySelector('#goods_buysort');
+  var goods_buysort_list = docTarget.querySelector('#goods_buysort_list');
+
+  if (goods_buysort && goods_buysort_list) {
+    goods_buysort.addEventListener('click', function (e) {
+      if (goods_buysort_list.style.display === "block") {
+        goods_buysort_list.style.display = "none";
+      } else {
+        goods_buysort_list.style.display = "block";
+      }
+    });
+  }
+}
+},{}],"src/fe_layout3.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fe3_initialize = fe3_initialize;
+
+function fe3_initialize(docTarget) {
+  var guide_header_right1 = docTarget.querySelector('#guide_header_right1');
+  var guide_header_right2 = docTarget.querySelector('#guide_header_right2');
+
+  if (guide_header_right1) {
+    var guide_content_1 = docTarget.querySelector('.guide_content_1');
+    var guide_divide_1 = docTarget.querySelector('#guide_divide_1');
+    guide_header_right1.addEventListener('click', function (e) {
+      if (guide_content_1.style.display === "block") {
+        guide_content_1.style.display = "none";
+      } else {
+        guide_content_1.style.display = "block";
+      }
+
+      if (guide_divide_1.style.display === "block") {
+        guide_divide_1.style.display = "none";
+      } else {
+        guide_divide_1.style.display = "block";
+      }
+    });
+  }
+
+  if (guide_header_right2) {
+    var guide_content_2 = docTarget.querySelector('.guide_content_2');
+    guide_header_right2.addEventListener('click', function (e) {
+      if (guide_content_2.style.display === "block") {
+        guide_content_2.style.display = "none";
+      } else {
+        guide_content_2.style.display = "block";
+      }
+    });
+  }
+}
+},{}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _fe_layout = _interopRequireDefault(require("../public/fe_layout1.html"));
@@ -125,6 +188,10 @@ var _fe_layout = _interopRequireDefault(require("../public/fe_layout1.html"));
 var _fe_layout2 = _interopRequireDefault(require("../public/fe_layout2.html"));
 
 var _fe_layout3 = _interopRequireDefault(require("../public/fe_layout3.html"));
+
+var _fe_layout4 = require("/src/fe_layout2");
+
+var _fe_layout5 = require("/src/fe_layout3");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -137,25 +204,31 @@ var fe_layout1 = document.querySelector('#fe_layout1');
 var fe_layout2 = document.querySelector('#fe_layout2');
 var fe_layout3 = document.querySelector('#fe_layout3');
 
-function changeFrame(target) {
+function changeFrame(target, initfunc) {
   main_element.lastChild.style.display = "none";
   main_element.lastChild.innerHTML = target;
+  main_iframe.style.height = main_element.lastChild.height;
+
+  if (initfunc) {
+    initfunc(main_element);
+  }
+
   setTimeout(function () {
     main_element.lastChild.style.display = "block";
   }, 100);
 }
 
 fe_layout1.addEventListener('click', function (e) {
-  changeFrame(layout1);
+  changeFrame(layout1, null);
 });
 fe_layout2.addEventListener('click', function (e) {
-  changeFrame(layout2);
+  changeFrame(layout2, _fe_layout4.fe2_initialize);
 });
 fe_layout3.addEventListener('click', function (e) {
-  changeFrame(layout3);
+  changeFrame(layout3, _fe_layout5.fe3_initialize);
 });
 changeFrame(layout1);
-},{"../public/fe_layout1.html":"public/fe_layout1.html","../public/fe_layout2.html":"public/fe_layout2.html","../public/fe_layout3.html":"public/fe_layout3.html"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../public/fe_layout1.html":"public/fe_layout1.html","../public/fe_layout2.html":"public/fe_layout2.html","../public/fe_layout3.html":"public/fe_layout3.html","/src/fe_layout2":"src/fe_layout2.js","/src/fe_layout3":"src/fe_layout3.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -183,7 +256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58966" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59231" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
