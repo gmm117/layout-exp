@@ -1,10 +1,10 @@
 body {
     width : 360px;
     height : 1430px;
-    padding: 10px 10px;
+    margin: 0 auto;
     background: white;
     font: {
-        family: "Noto Serif CJK KR", serif;
+        family: "Noto-Sans-KR", sans-serif;
     }
 }
 
@@ -38,6 +38,88 @@ header {
             &:nth-child(2n) {
                 padding: 0 26px;
             }
+        }
+    }
+}
+
+main {
+    .guide_divide {
+        height: 1px;
+        margin: 0 16px;
+        border: 1px solid #EEEEEE;
+        box-sizing: border-box;
+    }
+
+    .guide_header {
+        box-sizing: border-box;
+
+        .guide_header_direction {
+            display: flex;
+            justify-content: space-between;
+
+            .guide_header_left{
+                display: flex;
+                align-items: center;
+                width: 360px;
+                height: 64px;
+                box-sizing: border-box;
+                margin-left: 16px;
+    
+                >img {
+                    height: 32px;
+                    margin-left: 8px;
+                    margin-right: 10px;
+                }
+                >div {
+                    color: #333333;
+                    font-weight: 700;
+                }
+            }
+            .guide_header_right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 16px;
+                outline: none;
+                background: white; 
+    
+                >img {
+                   height: 20px;
+                   margin-right: 4px; 
+                }
+            }
+        }
+    }
+    .guide_content_1 {
+        box-sizing: border-box;
+        margin: 15px 20px 25px 20px;
+
+        >p {
+            line-height: 22px;
+            letter-spacing: -0.5px;
+            font-size: 14px;
+            color: #666666; 
+        }
+    }
+
+    .guide_content_2 {
+        box-sizing: border-box;
+        margin: 16px 20px 40px 20px;
+
+        >p {
+            line-height: 22px;
+            letter-spacing: -0.5px;
+            font-size: 14px;
+            color: #666666;
+            
+            >span {
+                color: #333333;
+            }
+        }
+
+        .content_title {
+            font-size: 16px;
+            font-weight: 600;
         }
     }
 }

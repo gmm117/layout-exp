@@ -1,6 +1,4 @@
 body {    
-    width : 360px;
-    padding: 53px 38px;
     background: white;
     font: {
         family: "Noto Serif CJK KR", serif;
@@ -10,9 +8,11 @@ body {
 $defaultborder : 1px solid gray;
 
 #content {
-   margin: 0 10px;
-   border: $defaultborder;
-   height: inherit;
+   width : 100%;
+   height: 100%;
+   margin: 0 auto;
+   min-width: 22.5rem;
+   max-width: 45rem;
    position: relative; 
    
    >img {
@@ -22,12 +22,6 @@ $defaultborder : 1px solid gray;
         width : 26px;
         height: 26px;
    }
-}
-
-.clearfix:after{
-    content: ""; 
-    display: block; 
-    clear: both;
 }
 
 .title {
@@ -57,7 +51,6 @@ $defaultborder : 1px solid gray;
         height: 40px;
         background: #73675C;
         border-radius: 24px;
-        font-weight: bold;
         padding: 0 12px;
         font-size: 15px;
 
@@ -82,16 +75,63 @@ $defaultborder : 1px solid gray;
         justify-content: space-between;
         align-items: center;
         height: 54px;
-        padding-top: 27px;
+        padding: 24px 0 8px 0;
         box-sizing: border-box;
         font-size: 15px;
-        font-weight: bold;
         letter-spacing: -0.5px;
+
+        >div {
+            display: flex;
+
+            button {
+                border : none;
+                background: white;
+                cursor: pointer;
+                outline: none;;
+                margin-left: 4px;
+                img {
+                    height: 16px;
+                }
+            }
+
+            ul {
+                box-sizing: border-box;
+                position: absolute;
+                top : 25px;
+                z-index: 1;               
+                width: 110px;
+                height: 170px;
+                padding: 5px 0;
+                display: none;
+                border : 1px solid black;
+                background: white;
+                font-size: 14px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 4px 0px;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width : 108px;
+                    height: 40px;
+                    padding : 10px 0px;
+                    box-sizing: border-box;
+
+                    &:nth-child(1) {
+                        color : #42C1BC;
+                    }
+                }
+            }
+        }
+
+        .goods_buycnt {
+            position: relative;
+            margin-left: 13px;
+        }
     }
 }
 
 .goods-lists {
-    box-sizing: border-box;
     .goods-list {
         padding-top : 24px;
         border-bottom: 1px solid #DDDDDD;
@@ -99,16 +139,38 @@ $defaultborder : 1px solid gray;
             padding : 0 16px;
             .goods-top {
                 display : flex;
+                min-width: 155px;
                 border-bottom: 1px dashed #EEEEEE;
                 
-                .goods_image {
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 155px;
+                    margin : 0 auto 0 0;
+                }
+                >button {
+                    border : none;
+                    background: white;
+                    cursor: pointer;
+                    outline: none;
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 19px;
+                }
+
+                >img {
                     height: 48px;
                     border-radius: 4px; 
                 }
                 
                 .goods_content {
-                    padding-left : 12px;
+                    font-weight: 400;
+                    margin-left : 12px;
                     font-size: 15px;
+                    letter-spacing: -0.5px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
     
                 .goods_money {
@@ -117,29 +179,24 @@ $defaultborder : 1px solid gray;
                     padding-bottom: 16px;
                     font-size : 18px;
                     letter-spacing: -0.5px;
-                    font-weight: bold;
-                }
-    
-                .goods_plus {
-                    height: 40px;
-                    padding-left: 19px;
+                    font-weight: 700;
                 }
             }
             .goods-bottom {
                 display : flex;
+                align-items: center;
                 padding : 8px 0 24px 0;
                 img {
                     width: 68px;
                     height: 19px;
                 }
-                p {
-                    display: flex;
-                    align-items: center;
-                    vertical-align: middle;
-                    padding: 0 8px;
-                    color : #666666;
+                span {    
+                    width: 1px;
+                    height: 8px;
+                    background: #DDDDDD;
+                    margin: 0px 8px;
                 }
-    
+                
                 div {
                     display: flex;
                     align-items: center;
